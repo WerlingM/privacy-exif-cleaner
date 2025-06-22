@@ -1,0 +1,22 @@
+[package]
+name = "privacy-exif-cleaner"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "Remove privacy-sensitive information from EXIF data while preserving technical metadata"
+license = "MIT"
+
+[[bin]]
+name = "privacy-exif-cleaner"
+path = "src/main.rs"
+
+[dependencies]
+walkdir = "2.4"
+clap = { version = "4.4", features = ["derive"] }
+exif = "0.5"
+
+[dev-dependencies]
+tempfile = "3.8"
+
+# Note: This tool requires ExifTool to be installed on your system
+# Install ExifTool from: https://exiftool.org/
